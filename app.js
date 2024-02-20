@@ -18,7 +18,7 @@ mongoose.connect(process.env.ATLAS_URL)
 app.use(express.json()) // for parsing application/json
 app.use(express.urlencoded({ extended: true })) // for parsing application/x-www-form-urlencoded
 app.use(cors({
-    origin:["http://localhost:5173"],
+    origin:["https://quotes-frontend-five.vercel.app/"],
 }));
 // seedDB();
 app.use(quotesRoutes);
