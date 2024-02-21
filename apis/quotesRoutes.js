@@ -63,7 +63,7 @@ router.delete('/quotes/:id', async (req, res) => {
       const updatedQuote = await existingQuote.save();
   
       res.status(200).json(updatedQuote);
-      req.redirect('/allquotes');
+      res.redirect('/allquotes');
     } catch (error) {
       console.error('Error updating quote:', error);
       res.status(500).json({ error: 'Internal Server Error' });
